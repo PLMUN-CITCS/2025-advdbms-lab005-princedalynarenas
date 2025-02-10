@@ -1,7 +1,7 @@
-# **2025-ADVDBMS-LAB005**
+2025-ADVDBMS-WK02S02E03
 Week 02 - Review on Database Concepts
 
-Laboratory # 05 - Guided Coding Exercise: Inserting, Updating, and Deleting Records
+Exercise # 03 - Guided Coding Exercise: Inserting, Updating, and Deleting Records
 
 ## **Instructions**
 
@@ -77,7 +77,7 @@ Only perform this if this is the first time you will setup your Git Environment
 
 ### **Step 3: Complete the Assignment**
 
-**Laboratory # 05 - Guided Coding Exercise: Inserting, Updating, and Deleting Records**
+**Exercise # 03 - Guided Coding Exercise: Inserting, Updating, and Deleting Records**
 
    **Objective:**
    Learn how to insert, update, and delete data within a table using SQL DML (Data Manipulation Language) commands. This exercise builds upon the Students table created in the previous exercise.
@@ -96,16 +96,13 @@ Only perform this if this is the first time you will setup your Git Environment
    - `delete_student.sql`: Contains the SQL statement for deleting a student record.
 
    **Notable Observations (to be discussed after completing the exercise):**
-   - Primary Keys are Sacred: They're not just for show! Primary keys uniquely identify each record, making UPDATE and DELETE operations precise. Always use them in your WHERE clauses whenever possible. Think of them as your data's fingerprint.
-   - WHERE Clause: Handle with Care: The WHERE clause is powerful, but with great power comes great responsibility. A misplaced condition can wreak havoc on your data. Double-check those conditions!
-   - Data Integrity Rules: Constraints like NOT NULL aren't just suggestions. They enforce rules at the database level. Understand how constraints affect your INSERT, UPDATE, and DELETE operations.
-   - Transactions: The Safety Net: For complex operations, transactions are your best friend. They ensure that either all your changes happen or none of them do. Think of it as an "undo" button for your database.
-
-**SQL Script Best Practices**
-   - SELECT for Verification: After any data manipulation, run a SELECT query to check your work. Did the data change as expected? Always verify!
-   - Comments: Your Code's Storyteller: Explain your INSERT, UPDATE, and DELETE statements with clear comments. Why are you making these changes? This is essential for understanding and maintaining your code.
-   - WHERE Clause Specificity: Be as specific as possible in your WHERE clauses. Avoid ambiguity to prevent accidental updates or deletions.
-
+   - Primary Keys: This exercise highlights the importance of primary keys for uniquely identifying records. Always use primary keys in `WHERE` clauses for `UPDATE` and `DELETE` statements whenever possible.
+   - WHERE Clause: The `WHERE` clause is crucial for specifying which records to update or delete. Be very careful when constructing WHERE clauses to avoid unintended modifications or deletions.
+   - Data Integrity: Think about how constraints (like `NOT NULL`) affect data manipulation. For example, you wouldn't be able to insert a record without values for FirstName and LastName if those columns have a NOT NULL constraint.
+   - SQL Syntax: Double-check the syntax for your specific SQL database system.
+   - Transactions: For more complex operations, you might want to use transactions to ensure data consistency. Transactions allow you to group multiple SQL statements together and either commit them all at once or roll them back if an error occurs.
+   - Select Statements: After performing these operations, use `SELECT * FROM Students;` to view the contents of the table and verify the changes. This is a good way to check your work.
+      
    **Step-by-Step Instructions:**
 
    1. Setting up the Environment
